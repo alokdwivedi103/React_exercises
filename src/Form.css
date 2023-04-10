@@ -1,0 +1,85 @@
+/* Form container */
+body {
+  margin-left: 500px;
+  margin-bottom: 20px;
+}
+form {
+  margin-block: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  background-color: rgb(162, 229, 205);
+  max-width: 550px;
+  min-width: 350px;
+}
+
+/* Form heading */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  /* padding-left:330px; */
+  color: white;
+  background-color: rgb(73, 205, 159);
+}
+/* h4{
+  margin-left: 165px;
+} */
+
+/* Form fields */
+label {
+  display: block;
+  text-align: left;
+  /* margin-bottom: 5px; */
+}
+input[type="checkbox"] {
+  width: 20px;
+}
+.a label {
+  margin-left: 70px;
+}
+
+input,
+select,
+textarea {
+  background-color: lightyellow;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid green;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+}
+input[type="checkbox"] {
+  margin-top: auto;
+  padding: 10px;
+}
+
+/* Error messages */
+span {
+  color: red;
+  font-size: 14px;
+}
+/* Submit button */
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: lightseagreen;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: green;
+}
