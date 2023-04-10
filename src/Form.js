@@ -77,7 +77,7 @@ const Form = () => {
         <div className="heading">
           <h4>Registration form</h4>
         </div>
-        <div>
+        <div className="Form_entry">
           <label htmlFor="loginId">Login ID</label>
           <input
             type="text"
@@ -86,10 +86,11 @@ const Form = () => {
             value={formData.loginId}
             onChange={handleChange}
           />
-          <br />
-          {errors.loginId && <span>{errors.loginId}</span>}
+          
         </div>
-        <div>
+        <br />
+          {errors.loginId && <span>{errors.loginId}</span>}
+        <div className="Form_entry">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -98,10 +99,11 @@ const Form = () => {
             value={formData.email}
             onChange={handleChange}
           />
-          <br />
-          {errors.email && <span>{errors.email}</span>}
+          
         </div>
-        <div>
+        <br />
+          {errors.email && <span>{errors.email}</span>}
+        <div className="Form_entry">
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -110,10 +112,11 @@ const Form = () => {
             value={formData.name}
             onChange={handleChange}
           />
-          <br />
-          {errors.name && <span>{errors.name}</span>}
+          
         </div>
-        <div>
+        <br />
+          {errors.name && <span>{errors.name}</span>}
+        <div className="Form_entry">
           <label htmlFor="timezone">Timezone</label>
           <select id="Timezone">
             <option value="" disabled selected>
@@ -129,10 +132,11 @@ const Form = () => {
               DST
             </option>
           </select>
-          <br />
-          {errors.timezone && <span>{errors.timezone}</span>}
+          
         </div>
-        <div>
+        <br />
+          {errors.timezone && <span>{errors.timezone}</span>}
+        <div className="Form_entry">
           <label htmlFor="homePage">Home Page</label>
           <input
             type="text"
@@ -141,10 +145,11 @@ const Form = () => {
             value={formData.homePage}
             onChange={handleChange}
           />
-          <br />
-          {errors.homePage && <span>{errors.homePage}</span>}
+          
         </div>
-        <div>
+        <br />
+          {errors.homePage && <span>{errors.homePage}</span>}
+        <div className="Form_entry">
           <label htmlFor="aboutMe">About Me</label>
 
           <textarea
@@ -153,10 +158,11 @@ const Form = () => {
             value={formData.aboutMe}
             onChange={handleChange}
           />
-          <br />
-          {errors.aboutMe && <span>{errors.aboutMe}</span>}
+          
         </div>
-        <div className="a">
+        <br />
+          {errors.aboutMe && <span>{errors.aboutMe}</span>}
+        <div className="checkbox">
           <label htmlFor="receiveNotifications">
             <input
               type="checkbox"
