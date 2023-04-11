@@ -11,25 +11,29 @@ const defaultForm = {
   aboutMe: "",
   receiveNotifications: false
 }
+const defaultObj = {}
 
 const Form = () => {
   const [formData, setFormData] = useState(defaultForm);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState(defaultObj);
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData({ ...formData, [name]: value });
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    const name = e.target.name;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
   };
 
   const handleSubmit = (e) => {
-
     const validationErrors = validateFormData(formData);
     if (Object.keys(validationErrors).length > 0) {
       e.preventDefault();
       setErrors(validationErrors);
     } else {
-      setFormData({ defaultForm });
-      setErrors({});
+      setFormData(defaultForm);
+      setErrors(defaultObj);
     }
   };
 
