@@ -1,8 +1,8 @@
+const EMAILREGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const URLREGEX = /^((http|https):\/\/)?[a-zA-Z0-9]+([\-\.]{1}[a-zA-Z0-9]+)*\.[a-zA-Z]{2,20}(:[0-9]{1,5})?(\/.*)?$/;
+
 export const validateFormData = (formData) => {
     const errors = {};
-    const EMAILREGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const URLREGEX = /^((http|https):\/\/)?[a-zA-Z0-9]+([\-\.]{1}[a-zA-Z0-9]+)*\.[a-zA-Z]{2,20}(:[0-9]{1,5})?(\/.*)?$/;
-
     if (!formData.loginId) {
         errors.loginId = "Login ID is required";
     }
@@ -14,7 +14,7 @@ export const validateFormData = (formData) => {
     if (!formData.name) {
         errors.name = "Name is required";
     }
-    if (!document.querySelector('select').value) {
+    if (!formData.timezone) {
         errors.timezone = "Timezone is required";
     }
     if (!formData.homePage) {
@@ -26,7 +26,7 @@ export const validateFormData = (formData) => {
     ) {
         errors.homePage = "Invalid URL format";
     }
-    if (formData.aboutMe.length <= 0 || formData.aboutMe.length < 50) {
+    if (formData.aboutMe.length <= 50) {
         errors.aboutMe = "About Me must be at least 50 characters";
     }
     if (!formData.receiveNotifications) {

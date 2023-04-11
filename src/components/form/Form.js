@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { validateFormData } from './errorutil'
+import { validateFormData } from './utils'
 import "./Form.css";
 
 const defaultForm = {
@@ -20,6 +20,7 @@ const Form = () => {
   const handleChange = (e) => {
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
     const name = e.target.name;
+
     setFormData({
       ...formData,
       [name]: value
@@ -85,7 +86,8 @@ const Form = () => {
         {errors.name && <span>{errors.name}</span>}
         <div className="Form_entry">
           <label htmlFor="timezone">Timezone</label>
-          <select id="Timezone" onChange={handleChange}>
+          <select id="Timezone" name="timezone" value={formData.timezone}
+            onChange={handleChange}>
             <option value="" disabled selected>
               Select a timezone
             </option>
