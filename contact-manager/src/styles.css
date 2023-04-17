@@ -1,0 +1,100 @@
+.search-div {
+  background-color: lavender;
+}
+.search-bar {
+  width: 35%;
+  margin: 5px;
+  padding-top: 4px;
+  padding-bottom: 7px;
+}
+
+.form-container {
+  margin-left: 5px;
+  margin-right: 20px;
+  width: 80%;
+  height: auto;
+  padding: 20px;
+  padding-right: 35px;
+  background-color: #ccc;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-container button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+
+  padding: 0;
+}
+
+.contact-list li {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 60%;
+  width: auto;
+}
+
+.contact-list li div {
+  margin-bottom: 5px;
+}
+.contact-list li img {
+  height: 50%;
+  width: 100%;
+}
+
+.contact-list li button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-list li button:hover {
+  background-color: #c62828;
+}
+
+.error {
+  color: red;
+}
